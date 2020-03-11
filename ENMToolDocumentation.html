@@ -14542,6 +14542,15 @@ Below is the syntax that is used to run the ENM command on the ENM Server and sc
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>NRCellDU and NRCellCU are used to capture empty datasets. These variable are set to 1 when the corresponding command is ran ( hget NRCellDU/NRCellCU ... the second index being the indicator of the command).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The results table for NBIoT cells is captured from the following command:</p>
 
 </div>
 </div>
@@ -14554,18 +14563,13 @@ Below is the syntax that is used to run the ENM command on the ENM Server and sc
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data manipulation is needed to parse the data into the correct columns. xprime grabs the MO and removes NbIotCell= from the eNodeB string. xprimeI  grabs the '1'- i[0] = 1 (or i[0] =  if data not available) and replaces commas with spaces. xend captures cellBarred - Operational State as is. All string lists are concatenated together and parsed by commas.</p>
 
-    </div>
 </div>
 </div>
-
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
